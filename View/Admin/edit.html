@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>管理员中心</title>
+<link rel="stylesheet" type="text/css" href="view/Admin/Css/add.css">
+</head>
+<body>
+<h3>后台管理中心</h3>
+<form action="index.php?group=Admin&module=TimeTables&act=update" method="post">
+
+
+     年级：{$getGC[0]['grade_name']}&nbsp;&nbsp;&nbsp; 班级:{$getGC[0]['class_name']}
+
+<table border="1px">
+   <tr>
+      <td></td>
+      <th>星期一</th>
+      <th>星期二</th>
+      <th>星期三</th>
+      <th>星期四</th>
+      <th>星期五</th>
+      <th>星期六</th>
+      <th>星期日</th>
+   </tr>
+   <tr><input type="hidden" name="node1" value="1">
+      <td>第一节</td>
+      <!--  {section name='sec1' loop=$rows1 start=0}
+         <td><input type="text" name="course[]" value="{$rows1[sec1]['course']}"></td>
+      {/section}-->
+      {foreach $rows1 as $k=>$row1}
+      <td><input type="text" name="course1[]" value="{$row1['course']}"></td>
+      {/foreach}     
+   </tr>
+   <tr><input type="hidden" name="node2" value="2">
+      <td>第二节</td>
+      {foreach $rows2 as $row2}
+      <td><input type="text" name="course2[]" value="{$row2['course']}"></td>
+      {/foreach}
+   </tr>
+   <tr><input type="hidden" name="node3" value="3">
+      <td>第三节</td>
+      {foreach $rows3 as $row3}
+      <td><input type="text" name="course3[]" value="{$row3['course']}"></td>
+      {/foreach}
+   </tr>
+   <tr><input type="hidden" name="node4" value="4">
+      <td>第四节</td>
+      {foreach $rows4 as $row4}
+      <td><input type="text" name="course4[]" value="{$row4['course']}"></td>
+      {/foreach}
+   </tr>
+   <tr><input type="hidden" name="node5" value="5">
+      <td>第五节</td>
+      {foreach $rows5 as $row5}
+      <td><input type="text" name="course5[]" value="{$row5['course']}"></td>
+      {/foreach}
+   </tr>
+   <tr><input type="hidden" name="node6" value="6">
+      <td>第六节</td>
+      {foreach $rows6 as $row6}
+      <td><input type="text" name="course6[]" value="{$row6['course']}"></td>
+      {/foreach}
+   </tr>
+   <tr><input type="hidden" name="node7" value="7">
+      <td>第七节</td>
+      {foreach $rows7 as $row7}
+      <td><input type="text" name="course7[]" value="{$row7['course']}"></td>
+      {/foreach}
+   </tr>
+   <tr><input type="hidden" name="node8" value="8">
+      <td>第八节</td>
+      {foreach $rows8 as $row8}
+      <td><input type="text" name="course8[]" value="{$row8['course']}"></td>
+      {/foreach}
+   </tr>
+
+</table>
+ <input type="submit" value="修改">
+ </form>
+</body>
+</html>

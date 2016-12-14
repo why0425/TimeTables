@@ -1,0 +1,17 @@
+body{
+	 text-align:center;
+	 background-color:#EEFFFE;
+}
+table{
+	width:100%;
+	heigth:100%;
+}
+tr{
+	background-color:#A9E2CF;
+}
+tr td{
+	background-color:#9FE8BE;
+}
+tr #week {
+	background-color:#C9F1D0;
+}

@@ -1,0 +1,34 @@
+*{margin:0;padding:0;}
+body{
+	 text-align:center;
+	 background-color:#ffffcc;
+}
+#ke{
+	background:url(../images/bj.png) no-repeat;
+	width:100%;
+	height:100%;
+	background-size:100% 100%;
+}
+#top{
+	padding-top:5px;
+}
+#add{
+	position:absolute;
+	left:62%;
+	top:76%;
+}
+#add a{
+	color:black;
+	font-size:18px;
+	font-weight:bold;
+}
+#see{
+	position:absolute;
+	left:62%;
+	top:85%;
+}
+#see a{
+	color:black;
+	font-size:18px;
+	font-weight:bold;
+}

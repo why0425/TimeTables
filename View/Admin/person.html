@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>管理员中心</title>
+<link rel="stylesheet" type="text/css" href="view/Admin/Css/person.css">
+</head>
+<body>
+<h3>后台管理中心</h3>
+<form action="index.php?group=Admin&module=TimeTables&act=search" method="post">
+年级：<select name=grade>
+          <option value="0">【请选择年级】</option>
+          {html_options values=$grade_id selected="{$sel_grade}" output=$grade_name}
+     </select>&nbsp;
+班级：<select name=class>
+          <option value="0">【请选择班级】</option>
+          {html_options values=$class_id selected="{$sel_class}" output=$class_name}
+     </select>&nbsp;  
+ 
+     <input type="submit" value="查看课程">
+     
+</form>
+{if $rows1==true}
+     年级：{$getGC[0]['grade_name']}&nbsp;&nbsp;&nbsp; 班级:{$getGC[0]['class_name']}
+     <input type="button" value="修改课程" onclick="location.href='index.php?group=Admin&module=TimeTables&act=edit'">
+     <input type="button" value="删除课程" onclick="location.href='index.php?group=Admin&module=TimeTables&act=del'">
+<!-- 加载课程表格 -->
+{include file='View/Admin/personb.html' assign='str'}
+{$str}
+{elseif $sel_class==true && $sel_class==true}
+<input type="button" value="添加课程" onclick="location.href='index.php?group=Admin&module=TimeTables&act=admin_add'">
+{/if}
+
+ 
+</body>
+</html>
